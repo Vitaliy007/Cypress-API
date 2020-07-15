@@ -24,7 +24,7 @@ describe('api call', () => {
         }).as('pokemon')
         cy.get('@pokemon').its('status').should('equal', 404)
     })
-    it.only('API Test - Norris Jokes', () => {
+    it('API Test - Norris Jokes', () => {
         cy.request('https://api.chucknorris.io/jokes/random').as('joke')
         cy.get('@joke').its('status').should('equal', 200)
     })
